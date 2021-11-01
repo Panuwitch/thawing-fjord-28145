@@ -69,7 +69,7 @@ class Information(Resource):
         return person,201
     
     @marshal_with(resource_field)
-    def patch(self,city_id):
+    def patch(self,person_id):
         args=data_update_args.parse_args()
         result=PersonModel.query.filter_by(id=city_id).first()
         if not result:
